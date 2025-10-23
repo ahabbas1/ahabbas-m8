@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home • Ahmed Abbas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Welcome to <span class="brand">Ahmed</span>'s Site</h1>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="https://dakwa.org" target="_blank" rel="noopener">Dakwa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <h2>About Me</h2>
+      <p>Hi, I'm <strong>Ahmed Abbas</strong>, a BAIS student in <em>Digital Product Management</em>.</p>
+
+      <section aria-labelledby="photos">
+        <h3 id="photos">Photos</h3>
+        <div class="grid two">
+          <figure class="card">
+            <img src="images/photo1.png" alt="Headshot of Ahmed">
+          </figure>
+          <figure class="card">
+            <img src="images/photo2.png" alt="Action photo of Ahmed">
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="quick-facts">
+        <h3 id="quick-facts">Quick Facts</h3>
+        <ul>
+          <li>Major: Business Analytics &amp; Information Systems</li>
+          <li>Interests: Consulting, automation, and sports analytics</li>
+          <li>Tools: Git, GitHub, HTML, CSS</li>
+        </ul>
+      </section>
+    </article>
+
+
+    <section aria-labelledby="schedule">
+      <h2 id="schedule">Weekly Schedule</h2>
+      <table class="table schedule">
+        <caption class="sr-only">Sample weekly schedule</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Morning</th>
+            <th scope="col">Afternoon</th>
+            <th scope="col">Evening</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Mon</th>
+            <td>Class</td>
+            <td>Study</td>
+            <td>Workout</td>
+          </tr>
+          <tr>
+            <th scope="row">Wed</th>
+            <td>Lab</td>
+            <td>Project</td>
+            <td>Reading</td>
+          </tr>
+          <tr>
+            <th scope="row">Fri</th>
+            <td>Class</td>
+            <td>Team Meeting</td>
+            <td>Free Time</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <p class="muted">Navigate to the <a href="portfolio.html">Portfolio</a> page to see more.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Ahmed Abbas.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
