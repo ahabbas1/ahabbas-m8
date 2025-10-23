@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio • Ahmed</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Portfolio</h1>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="https://www.uiowa.edu/" target="_blank" rel="noopener">University of Iowa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <h2>Recent Projects</h2>
+      <ol>
+        <li class="card project">
+          <h3 class="project-title">Inventory Automation</h3>
+          <p>Automated POS inventory updates using spreadsheet integrations and APIs.</p>
+        </li>
+        <li class="card project">
+          <h3 class="project-title">Marketing Analytics Dashboard</h3>
+          <p>Built KPIs for campaign performance, retention, and ROI tracking.</p>
+        </li>
+      </ol>
+      <p>Want to learn more? Visit my <a href="index.html">Home</a> page.</p>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Ahmed Abbas.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
