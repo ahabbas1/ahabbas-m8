@@ -1,0 +1,141 @@
+/* External stylesheet for BAIS 3300 HW6 */
+/* Applies formatting to >= 6 elements: body, header, nav, a, h1/h2, img, table, th/td, .card, .tip, footer, etc. */
+
+:root {
+  --bg: #f8fafc;
+  --ink: #0f172a;
+  --accent: #2563eb;
+  --muted: #475569;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background-color: var(--bg); /* requirement: background-color */
+}
+
+.container {
+  width: min(100%, 960px);
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.site-header, .site-footer {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+  margin-top: 2rem;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.brand {
+  color: var(--accent);
+}
+
+/* Box model demo (border, margin, padding) on .card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);     /* border */
+  border-radius: 10px;
+  padding: 1rem;                        /* padding */
+  margin: 0.5rem 0;                     /* margin */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.tip {
+  background: #eef2ff;
+  border-left: 4px solid var(--accent);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Responsive grid utility */
+.grid.two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media (max-width: 640px) {
+  .grid.two { grid-template-columns: 1fr; }
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Table styling via external CSS */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.table th, .table td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0.875rem;
+  text-align: left;
+}
+.table thead th {
+  background: #f1f5f9;
+  font-weight: 600;
+}
+.table tr:last-child th, .table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Example custom class usage */
+.project-title {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+}
+
+/* Visually hidden (for caption) */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
